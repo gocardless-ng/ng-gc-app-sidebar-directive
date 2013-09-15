@@ -25,6 +25,9 @@ module.exports = function(config) {
       // Specs helpers
       'components/jasmine-helpers/*.js',
 
+      // ng-gc dependencies
+      'components/ng-gc*/**/*.js',
+
       // app & specs
       'src/**/*.js',
 
