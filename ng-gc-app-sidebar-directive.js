@@ -3,7 +3,11 @@
  * (c) 2013-2013 GoCardless, Ltd.
  * https://github.com/gocardless-ng/ng-gc-app-sidebar-directive.git
  * License: MIT
- */'use strict';
+ */
+(function(){
+'use strict';
+
+'use strict';
 
 angular.module('gc.appSidebar', [
   'gc.appContent',
@@ -25,7 +29,8 @@ angular.module('gc.appSidebar', [
   }
 ]);
 
-angular.module('app-sidebar-template.html', []).run(function($templateCache) {
+angular.module('app-sidebar-template.html', []).run(['$templateCache', function($templateCache) {
   $templateCache.put('app-sidebar-template.html',
     '<div><app-content><div class="grid u-cf"><div class="grid__cell app-sidebar"><ng-include src="sidebarInclude"></ng-include></div><div class="grid"><div class="grid__cell" ng-transclude=""></div></div></div></app-content></div>');
-});
+}]);
+})();
